@@ -115,7 +115,7 @@ export default function PaymentSelection() {
         <div className="flex gap-4 mb-6">
           <button
             onClick={() => setPaymentMethod_2("card")}
-            className={`px-4 py-2 rounded-full border transition font-aeonik ${
+            className={`px-4 py-2 rounded-lg border transition font-aeonik ${
               paymentMethod_2 === "card"
                 ? "bg-cyan-400 text-white"
                 : "bg-transparent border-white/20 text-white/70 hover:border-white/40"
@@ -183,7 +183,7 @@ export default function PaymentSelection() {
             (paymentMethod_2 === "card" && !pendingCard) ||
             (paymentMethod_2 === "bank" && !pendingBank)
           }
-          className={`w-full mt-2 font-aeonik py-2 rounded-full transition ${
+          className={`w-full mt-2 font-aeonik py-2 rounded-lg transition ${
             (paymentMethod_2 === "card" && pendingCard) ||
             (paymentMethod_2 === "bank" && pendingBank)
               ? "bg-emerald-400 text-white hover:bg-emerald-500"
@@ -251,7 +251,7 @@ export default function PaymentSelection() {
                 type="button"
                 onClick={handleCardRegister}
                 disabled={registering}
-                className={`w-full font-aeonik py-2 rounded-full transition ${
+                className={`w-full font-aeonik py-2 rounded-lg transition ${
                   registering
                     ? "bg-white/10 text-white/40 cursor-not-allowed"
                     : "bg-cyan-400 text-white hover:bg-cyan-500"
@@ -302,7 +302,7 @@ export default function PaymentSelection() {
                 type="button"
                 onClick={handleBankRegister}
                 disabled={registering}
-                className={`w-full font-aeonik py-2 rounded-full transition ${
+                className={`w-full font-aeonik py-2 rounded-lg transition ${
                   registering
                     ? "bg-white/10 text-white/40 cursor-not-allowed"
                     : "bg-cyan-400 text-white hover:bg-cyan-500"
@@ -319,7 +319,8 @@ export default function PaymentSelection() {
             dispatch(resetCheckout());
             navigate("/checkout");
           }}
-          className="mt-6 w-full py-2 border border-white text-white hover:bg-white/10 rounded-full"
+          className="mt-6 w-full py-2 text-white bg-indigo-600 hover:bg-indigo-700
+           rounded-lg"
         >
           Go To Previous Page
         </button>

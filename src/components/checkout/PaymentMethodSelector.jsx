@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import { setPaymentMethod_1 } from "../../redux/checkout/checkoutActions";

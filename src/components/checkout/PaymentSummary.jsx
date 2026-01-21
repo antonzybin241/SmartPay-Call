@@ -169,7 +169,8 @@ export default function PaymentSummary() {
         <div className="mt-6 flex flex-col md:flex-row gap-3 justify-between items-center font-gilroy">
           <button
             onClick={goBack}
-            className="w-full md:w-auto flex items-center justify-center gap-2 border border-white text-white py-2 px-4 rounded-full hover:bg-white/10 transition"
+            className="w-full md:w-auto flex items-center justify-center gap-2 text-white py-2 px-4 bg-indigo-600 hover:bg-indigo-700
+           rounded-lg transition"
           >
             <ArrowLeft size={16} />
             Go To Previous Page

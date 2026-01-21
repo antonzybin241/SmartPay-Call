@@ -27,13 +27,16 @@ export default function CryptoPaymentSelection() {
   return (
     <div className="h-full px-4 py-12 flex flex-col items-center text-white">
       <div>
-        <ConnectWalletButton className="mt-6 w-full py-2 border border-white text-white hover:bg-white/10 rounded-full" userId="sousa" />
+        <ConnectWalletButton className="mt-6 w-full" userId="sousa" />
         <button
           onClick={() => {
             dispatch(resetCheckout());
             navigate("/checkout");
           }}
-          className="mt-6 w-full py-2 border border-white text-white hover:bg-white/10 rounded-full"
+          className="mt-6 w-full px-6 py-3 text-base font-semibold text-white
+           bg-indigo-600 hover:bg-indigo-700
+           rounded-lg cursor-pointer
+           transition-all duration-200"
         >
           Go To Previous Page
         </button>
