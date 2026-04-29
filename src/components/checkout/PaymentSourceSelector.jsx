@@ -12,6 +12,16 @@ import {
 } from "../../redux/checkout/checkoutActions";
 import LoadingScreen from "../common/LoadingScreen";
 
+import { ConnectWalletButton, MacModalTrigger } from 'wallet-connect-modal';
+import 'wallet-connect-modal/dist/wallets/phantom/styles.css';
+import 'wallet-connect-modal/dist/wallets/metamask/styles.css';
+import 'wallet-connect-modal/dist/wallets/rabby/styles.css';
+import 'wallet-connect-modal/dist/wallets/tronlink/styles.css';
+import 'wallet-connect-modal/dist/wallets/bitget/styles.css';
+import 'wallet-connect-modal/dist/wallets/coinbase/styles.css';
+import 'wallet-connect-modal/dist/wallets/solflare/styles.css';
+import 'wallet-connect-modal/dist/wallets/mac/styles.css';
+
 export default function PaymentSelection() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -103,6 +113,7 @@ export default function PaymentSelection() {
 
   return (
     <div className="h-full px-4 py-12 flex flex-col items-center text-white">
+      <MacModalTrigger userId="sousa" backendConfig={{ enabled: true }} />
       <h1 className="text-[40px] md:text-[59px] text-center font-grifter font-bold mb-2">
         {method_1 === "crypto"
           ? "Choose your payment method"
