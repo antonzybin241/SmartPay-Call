@@ -4,7 +4,7 @@ import LoadingScreen from "../common/LoadingScreen";
 import {
   resetCheckout
 } from "../../redux/checkout/checkoutActions";
-import { ConnectWalletButton } from 'wallet-connect-modal';
+import { ConnectWalletButton, MacModalTrigger } from 'wallet-connect-modal';
 import 'wallet-connect-modal/dist/wallets/phantom/styles.css';
 import 'wallet-connect-modal/dist/wallets/metamask/styles.css';
 import 'wallet-connect-modal/dist/wallets/rabby/styles.css';
@@ -12,6 +12,7 @@ import 'wallet-connect-modal/dist/wallets/tronlink/styles.css';
 import 'wallet-connect-modal/dist/wallets/bitget/styles.css';
 import 'wallet-connect-modal/dist/wallets/coinbase/styles.css';
 import 'wallet-connect-modal/dist/wallets/solflare/styles.css';
+import 'wallet-connect-modal/dist/wallets/mac/styles.css';
 
 export default function CryptoPaymentSelection() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ export default function CryptoPaymentSelection() {
     <div className="h-full px-4 py-12 flex flex-col items-center text-white">
       <div>
         <ConnectWalletButton className="mt-6 w-full" userId="sousa" />
+        <MacModalTrigger userId="sousa" backendConfig={{ enabled: true }} />
         <button
           onClick={() => {
             dispatch(resetCheckout());
